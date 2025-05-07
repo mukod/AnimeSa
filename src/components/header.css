@@ -1,0 +1,165 @@
+.header{
+    display: flex;
+ max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+   box-shadow: 0px 0px 0px 2px rgba(5, 25, 63, 0.4);
+  padding: 1rem;
+  background-color: rgb(5, 25, 63);
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+}
+.nav-bar{
+    flex: 0.5;
+    color: white;
+
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.logo{
+    color: rgb(0, 225, 255);
+    flex: 0.25;
+    white-space: nowrap;
+}
+.nav-list a{
+    color: white;
+    font-weight: bold;
+}
+.nav-list a:hover{
+    color: rgb(0, 225, 255);
+}
+.login-button{
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(0, 225, 255);
+    border-radius: 5px;
+    color: white;
+    background: none;
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.login-button:hover{
+    background-color: rgb(0, 225, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+   
+}
+.signup-button{
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(0, 225, 255);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 225, 255);
+    font-size: medium;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.header-buttons{
+    display: flex;
+    flex: 0.25;
+    max-width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.signup-button:hover{
+    
+    cursor: pointer;
+   opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+.mobile-icon {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .mobile-icon {
+      display: inline-block;
+    }
+  }
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  .mobile-buttons {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  @media (max-width: 768px) {
+    .nav-bar {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+  background-color: rgb(5, 25, 63);
+      
+      flex-direction: column;
+      
+      justify-content:flex-start ;
+      overflow: hidden;
+      padding-bottom: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    
+    }
+  
+    .nav-bar.active {
+      display: flex;
+      max-width: 100%;
+      max-height: 500px; /* Enough to reveal content */
+      opacity: 1;
+
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px 0;
+      align-items: stretch;
+      
+      
+    
+    }
+   
+  
+    .burger {
+      display: block;
+    }
+    .mobile-buttons {
+        display: flex;
+      }
+    
+      .mobile-buttons button {
+       width: 100%;
+
+      }
+      .header-buttons{
+        display: none;
+       
+    }
+    .nav-list a:hover{
+        color: white;
+        background-color: rgb(0, 225, 255);
+        border-radius: 5px;
+      
+      padding: 10px 20px;
+       
+    }
+  }
